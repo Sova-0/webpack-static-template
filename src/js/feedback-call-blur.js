@@ -58,9 +58,9 @@ closeCallButton.addEventListener('click', function (event) {
 })
 
 // ФУНКЦИЯ ЗАКРЫТИЯ ЭКРАНА ПРИ НАЖАТИИ НЕ НА ФОРМУ
-blurScreen.addEventListener('click', function (event) {
+document.body.addEventListener('click', function (event) {
   if (IsVisibleWinwow) {
-    if (event.target !== feedback) {
+    if (event.target !== feedback && !feedback.contains(event.target)) {
       closeFeedbackFun()
     }
     if (event.target !== call && !call.contains(event.target)) {
