@@ -2,6 +2,7 @@ const aside = document.querySelector('.aside')
 const showAside = document.getElementById('menuIcon')
 const closeAside = document.getElementById('closeAside')
 const blurScreen = document.querySelector('.blurAside')
+const body = document.querySelector('body')
 let IsVisibleWinwow = false
 
 function showAsideFun() {
@@ -9,6 +10,7 @@ function showAsideFun() {
   aside.style.position = 'fixed'
   aside.style.zIndex = 4
   blurScreen.style.display = 'block'
+  body.style.overflowY = 'hidden'
   IsVisibleWinwow = true
 }
 showAside.addEventListener('click', function (event) {
@@ -19,6 +21,7 @@ showAside.addEventListener('click', function (event) {
 function closeAsideFun() {
   aside.style.display = 'none'
   blurScreen.style.display = 'none'
+  body.style.overflowY = 'auto'
   IsVisibleWinwow = fasle
 }
 closeAside.addEventListener('click', function (event) {
