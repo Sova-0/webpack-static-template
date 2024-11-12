@@ -61,9 +61,11 @@ closeCallButton.addEventListener('click', function (event) {
 blurScreen.addEventListener('click', function (event) {
   if (IsVisibleWinwow) {
     if (event.target !== feedback && !feedback.contains(event.target)) {
+      event.stopPropagation()
       closeFeedbackFun()
     }
     if (event.target !== call && !call.contains(event.target)) {
+      event.stopPropagation()
       closeCallFun()
     }
   }

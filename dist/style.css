@@ -1221,7 +1221,8 @@ html {
       position: absolute;
       left: -60px; } }
 
-.blur {
+.blur,
+.blurAside {
   display: none;
   position: fixed;
   top: 0;

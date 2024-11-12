@@ -1,7 +1,7 @@
 const aside = document.querySelector('.aside')
 const showAside = document.getElementById('menuIcon')
 const closeAside = document.getElementById('closeAside')
-const blurScreen = document.querySelector('.blur')
+const blurScreen = document.querySelector('.blurAside')
 let IsVisibleWinwow = false
 
 function showAsideFun() {
@@ -27,10 +27,24 @@ closeAside.addEventListener('click', function (event) {
 })
 
 // ФУНКЦИЯ ЗАКРЫТИЯ ЭКРАНА ПРИ НАЖАТИИ НЕ НА ASIDE
-document.body.addEventListener('click', function (event) {
+blurScreen.addEventListener('click', function (event) {
   if (IsVisibleWinwow) {
     if (event.target !== aside && !aside.contains(event.target)) {
+      event.stopPropagation()
       closeAsideFun()
     }
   }
 })
+
+function asideResize() {
+  const screenWidth = window.innerWidth
+
+  if (screenWidth >= 1366) {
+    aside.style.display = 'block'
+    aside.style.position = 'sticky'
+  } else {
+    closeAsideFun()
+  }
+}
+
+window.addEventListener('resize', asideResize)
