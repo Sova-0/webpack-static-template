@@ -1,0 +1,191 @@
+.price {
+  margin-bottom: 40px;
+  &__main {
+    padding: 8px 16px;
+    height: 240px;
+    box-sizing: border-box;
+  }
+  &__table-header {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    height: 200px;
+    margin-bottom: 16px;
+    &-item {
+      display: flex;
+      position: relative;
+      padding: 16px;
+      flex-direction: column;
+      width: 260px;
+      background-color: white;
+      border-radius: 6px;
+      box-sizing: border-box;
+      &-text {
+        font-size: 14px;
+        &-name {
+          line-height: 16px;
+          margin-bottom: 4px;
+          color: #7e7e82;
+        }
+        &-description {
+          line-height: 18px;
+          margin-bottom: 16px;
+        }
+      }
+      &-flex {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  &__button-price {
+    display: flex;
+    position: absolute;
+    font-family: 'TT Lakes-Regular';
+    width: 119px;
+    height: 32px;
+    right: 8px;
+    bottom: 16px;
+    font-size: 12px;
+    padding: 4px 12px;
+    color: white;
+    background-color: #ff3e79;
+    border: 0px;
+    border-radius: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 8px;
+      height: 10px;
+      background: url(../img/arrow_right-white.svg);
+    }
+  }
+  &__text {
+    padding: 0px 16px;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 450px;
+    height: auto;
+    letter-spacing: 0.2px;
+  }
+  &__button-offer {
+    position: relative;
+    font-family: 'TT Lakes-Regular';
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    width: 240px;
+    height: 54px;
+    border: 0px;
+    background-color: #f8f8f8;
+    text-align: start;
+    font-weight: bold;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -13px;
+      left: 130px;
+      background: url(../img/arrow_right.svg) no-repeat;
+      width: 24px;
+      height: 26px;
+    }
+  }
+  @media all and (min-width: 768px) {
+    & {
+      &__table-header {
+        display: flex;
+        align-self: center;
+        padding-left: 20px;
+        padding-bottom: 16px;
+        padding-top: 31px;
+        &-service {
+          width: 348px;
+        }
+        &-price {
+          width: 74px;
+          margin-left: 24px;
+        }
+        &-date {
+          width: 84px;
+          margin-left: 24px;
+        }
+      }
+      .swiper {
+        width: auto;
+        height: auto;
+      }
+      .swiper-pagination {
+        display: none;
+      }
+      &__list {
+        display: grid;
+        border-radius: 6px;
+        width: auto;
+        height: auto;
+        &-item {
+          border-radius: 0px;
+          flex-direction: row;
+          align-items: center;
+          align-self: center;
+          width: auto;
+          &-text {
+            &-description {
+              margin-bottom: 0px;
+            }
+          }
+          & + & {
+            border-top: 1px solid #eaeaea;
+          }
+        }
+      }
+      &__button-price {
+        bottom: 8px;
+      }
+      &__container-service,
+      &__container-description {
+        width: 348px;
+      }
+      &__container-price,
+      &__container-cost {
+        width: 74px;
+        margin-left: 24px;
+      }
+      &__container-date,
+      &__container-time {
+        width: 84px;
+        margin-left: 24px;
+      }
+      &__container-service,
+      &__container-price,
+      &__container-date {
+        display: none;
+      }
+    }
+  }
+  @media all and (min-width: 1336px) {
+    & {
+      &__main {
+        padding: 8px 32px;
+      }
+      &__text {
+        padding-left: 32px;
+      }
+      &__button-offer {
+        padding-left: 32px;
+        &::before {
+          left: 140px;
+        }
+      }
+    }
+  }
+}
