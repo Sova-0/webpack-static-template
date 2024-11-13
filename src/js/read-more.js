@@ -41,7 +41,7 @@ const changeTextReadMoreUppage = document.getElementById(
 function showReadMoreUppageFun() {
   uppageMainText.classList.toggle('main__text--visible')
   changeTextReadMoreUppage.classList.toggle('read-more__button-text--rot')
-  if (uppageMainText.classList.contains('main__list--visible')) {
+  if (uppageMainText.classList.contains('main__text--visible')) {
     changeTextReadMoreUppage.textContent = 'Скрыть'
   } else {
     changeTextReadMoreUppage.textContent = 'Читать далее'

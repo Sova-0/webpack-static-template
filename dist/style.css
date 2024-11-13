@@ -552,41 +552,21 @@ body {
   margin-top: 0px;
   margin-left: 16px;
   margin-right: 16px;
-  margin-bottom: 16px;
   font-weight: 400;
-  height: 5rem;
+  height: 6rem;
   overflow-y: hidden;
 }
-
-.main__read-more-button {
-  font-family: 'TT Lakes-Regular';
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  margin-left: 16px;
-  margin-bottom: 16px;
-  border: none;
-  outline: none;
-  background: #f8f8f8;
-  font-weight: bold;
+.main__text-wrapper .read-more {
+  display: block;
+  padding: 16px;
 }
-
-.main__read-more-button span {
-  margin-left: 8px;
+.main__text--visible {
+  height: auto;
 }
-.main__read-more-image {
-  position: relative;
+.read-more__button-text--rot::before {
+  transform: rotate(180deg);
+  transition: transform 0.5s;
 }
-.main__read-more-image::before {
-  content: '';
-  position: absolute;
-  left: -25px;
-  top: -2px;
-  background: url(./static/expand.svg);
-  width: 20px;
-  height: 20px;
-}
-
 .main__img {
   width: 100vw;
 }
